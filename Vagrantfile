@@ -3,8 +3,8 @@
 
 
 Vagrant.configure("2") do |config|
-config.vm.provision "shell", path: "backup_script.sh"
-
+config.vm.provision "shel
+l", path: "backup_script.sh"
 config.vm.define "box1" do |box1|
 box1.vm.box="ubuntu/trusty64"
 #box1.vm.provision "shell", inline: <<-SHELL
