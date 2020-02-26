@@ -12,7 +12,7 @@ box1.vm.provision "shell", inline: <<-SHELL
 SHELL
 box1.vm.network :forwarded_port, guest: 22, host: 10122, id: "ssh"
 box1.vm.network :private_network, ip: "192.168.56.101"
-box1.vm.provider :virtualbox do |v| 
+box1.vm.provider :virtualbox do |box1| 
 v.customize ["modifyvm", :id, "--memory", 1020]
 end
 
